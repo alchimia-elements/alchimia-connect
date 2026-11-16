@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alchimia | The Art of Revelation</title>
+<meta name="description" content="Follow Alchimia and experience the Art of Revelation in person in Weesp, Milan, Berlin and London.">
+<meta name="theme-color" content="#F8F7F4">
+<meta property="og:title" content="Alchimia | The Art of Revelation">
+<meta property="og:description" content="Follow Alchimia and visit our showrooms.">
+<meta property="og:image" content="img/weesp.jpg">
+<link rel="icon" href="img/monogram-dark-sienna.png">
+<link rel="preload" href="fonts/Reckless-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Saans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  /* Brand typefaces (Visual Usage Guide): Reckless for what is said, Saans for what is explained */
+  @font-face{font-family:"Reckless";src:url("fonts/Reckless-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Saans";src:url("fonts/Saans-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+
+  :root{
+    /* Brand palette */
+    --cold-steel:#F8F7F4;
+    --soft-linen:#E7E4DA;
+    --khaki-beige:#C5B1A2;
+    --dark-sienna:#331304;
+    --terracotta:#DC5034;   /* accent: tagline dot and the visit link only */
+    --urban-black:#272220;
+    --dim-grey:#61605C;
+    --white:#FFFFFF;
+
+    --serif:"Reckless","Source Serif 4",Georgia,serif;
+    --sans:"Saans","Inter",system-ui,-apple-system,sans-serif;
+    --rule:rgba(51,19,4,.18);
+    --gutter:28px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--cold-steel);color:var(--dark-sienna);
+    font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  .col{max-width:520px;margin:0 auto;padding:0 var(--gutter)}
+
+  /* Reckless: regular weight, tight leading, tracking -2%. No bold, no all caps. */
+  .reckless{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;line-height:1.1}
+  .label{font-size:13px;color:var(--dim-grey);letter-spacing:.01em}
+
+  /* ---------- Header: logotype first, with clear space ---------- */
+  header.col{padding-top:88px;padding-bottom:72px;text-align:center}
+  header img{width:168px;height:auto;display:block;margin:0 auto 22px}
+  header .tagline{font-size:22px;display:inline-flex;align-items:baseline}
+  header .tagline .dot{width:.2em;height:.2em;background:var(--terracotta);margin-left:.08em;display:inline-block}
+  html{scroll-behavior:smooth}
+
+  /* ---------- Channels ---------- */
+  .channels .label{margin-bottom:10px}
+  .channels ul{list-style:none;border-top:1px solid var(--rule)}
+  .channels li{border-bottom:1px solid var(--rule)}
+  .channels a{
+    display:flex;align-items:center;gap:16px;padding:20px 2px;
+    transition:padding .35s ease, opacity .35s ease;
+  }
+  .channels a:hover,.channels a:focus-visible{padding-left:8px}
+  .channels .icon{width:18px;height:18px;flex:none;fill:var(--dark-sienna)}
+  .channels .name{flex:1;font-family:var(--serif);font-size:24px;letter-spacing:-.02em;line-height:1.1}
+  .channels .arrow{width:14px;height:14px;flex:none;stroke:var(--dark-sienna);fill:none;stroke-width:1.4}
+
+  /* ---------- Statement: a pause on Dark Sienna ---------- */
+  .statement{background:var(--dark-sienna);color:var(--white);margin-top:56px;padding:36px 0 40px}
+  .statement .col{display:flex;align-items:flex-start;gap:16px}
+  .statement .square{width:9px;height:9px;background:var(--white);flex:none;margin-top:.55em}  /* the one square */
+  .statement p{font-size:24px}
+
+  /* ---------- Showrooms ---------- */
+  .showrooms{padding:56px 0 16px}
+  #visit{scroll-margin-top:32px}
+  .showrooms > .col > .label{margin-bottom:28px}
+  .showroom{padding-bottom:44px;margin-bottom:44px;border-bottom:1px solid var(--rule)}
+  .showroom:last-child{border-bottom:0;margin-bottom:0}
+  .showroom figure{position:relative;aspect-ratio:3/2;overflow:hidden;margin-bottom:20px;background:var(--soft-linen)}
+  .showroom img{width:100%;height:100%;object-fit:cover;display:block}
+  .showroom figcaption{position:absolute;right:10px;bottom:8px;font-size:10px;color:rgba(255,255,255,.85)}
+  .showroom h2{font-size:30px;margin:4px 0 8px}
+  .showroom address{font-style:normal;color:var(--dim-grey);font-size:15px;margin-bottom:18px}
+  .actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+  .text-link{font-size:15px;padding-bottom:2px;border-bottom:1px solid var(--dark-sienna)}
+  .text-link:hover{opacity:.65}
+  /* Terracotta as text on light: the one call to action */
+  .text-link.accent{color:var(--terracotta);border-color:var(--terracotta)}
+
+  /* ---------- Close: monomark only ---------- */
+  footer{padding:24px 0 72px;text-align:center}
+  footer img{width:28px;height:auto;display:block;margin:0 auto}
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="col">
+  <img src="img/logo-dark-sienna.png" alt="Alchimia">
+  <p class="tagline reckless">The Art of Revelation<span class="dot" aria-hidden="true"></span></p>
+</header>
+
+<main>
+  <section class="channels col" aria-labelledby="follow">
+    <p class="label" id="follow">Follow Alchimia</p>
+    <ul>
+      <li><a href="https://www.instagram.com/alchimia.elements/" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 2.1.1 3.3c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 8.1a3.2 3.2 0 100-6.4 3.2 3.2 0 000 6.4zm5.1-8.3a1.1 1.1 0 110-2.3 1.1 1.1 0 010 2.3z"/></svg>
+        <span class="name">Instagram</span>
+        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a></li>
+      <li><a href="https://www.linkedin.com/company/alchimia-elements/" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9.75h4v11H3v-11zm7 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4v-11z"/></svg>
+        <span class="name">LinkedIn</span>
+        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a></li>
+      <li><a href="https://www.youtube.com/@AlchimiaElements" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12 31 31 0 001 16.8a3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+        <span class="name">YouTube</span>
+        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a></li>
+      <li><a href="https://www.alchimia-elements.com/?utm_source=brochure&amp;utm_medium=links-page&amp;utm_campaign=brochure-2026" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.9 6h-3a15.7 15.7 0 00-1.3-3.9A8 8 0 0118.9 8zM12 4a13.8 13.8 0 011.9 4h-3.8A13.8 13.8 0 0112 4zM4.3 14a8.2 8.2 0 010-4h3.4a16.5 16.5 0 000 4H4.3zm.8 2h3a15.7 15.7 0 001.3 3.9A8 8 0 015.1 16zm3-8h-3a8 8 0 014.3-3.9A15.7 15.7 0 008.1 8zM12 20a13.8 13.8 0 01-1.9-4h3.8A13.8 13.8 0 0112 20zm2.3-6H9.7a14.6 14.6 0 010-4h4.6a14.6 14.6 0 010 4zm.3 5.9a15.7 15.7 0 001.3-3.9h3a8 8 0 01-4.3 3.9zm1.7-5.9a16.5 16.5 0 000-4h3.4a8.2 8.2 0 010 4h-3.4z"/></svg>
+        <span class="name">Website</span>
+        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a></li>
+      <li><a href="#visit">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+        <span class="name">Showrooms</span>
+        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+      </a></li>
+    </ul>
+  </section>
+
+  <section class="statement" aria-label="Experience Alchimia">
+    <div class="col">
+      <div class="square" aria-hidden="true"></div>
+      <p class="reckless">Some things are best revealed in person.</p>
+    </div>
+  </section>
+
+  <section class="showrooms" aria-labelledby="visit">
+    <div class="col">
+      <p class="label" id="visit">Where to experience Alchimia</p>
+
+      <article class="showroom">
+        <figure><img src="img/weesp.jpg" alt="An Alchimia Element revealed within a stone wall at the Alchimia showroom in Weesp" loading="lazy"><figcaption>Photo: Alchimia</figcaption></figure>
+        <p class="label">Alchimia Showroom</p>
+        <h2 class="reckless">Weesp, The Netherlands</h2>
+        <address>Pampuslaan 170, 1382 JS Weesp</address>
+        <div class="actions">
+          <a class="text-link accent" href="mailto:contact@alchimia-elements.com?subject=Private%20visit%20to%20the%20Alchimia%20showroom%20in%20Weesp">Book a private visit</a>
+          <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Pampuslaan+170+1382+JS+Weesp" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </article>
+
+      <article class="showroom">
+        <figure><img src="img/milan.jpg" alt="The Alchimia Display Element in dark ceramic at ICG Gallery Milan" loading="lazy"><figcaption>Photo: Iris Ceramica Group</figcaption></figure>
+        <p class="label">ICG Gallery</p>
+        <h2 class="reckless">Milan, Italy</h2>
+        <address>Via Santa Margherita 4, 20121 Milano</address>
+        <div class="actions">
+          <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=ICG+Gallery+Via+Santa+Margherita+4+20121+Milano" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </article>
+
+      <article class="showroom">
+        <figure><img src="img/berlin.jpg" alt="An Alchimia Element in green ceramic at ICG Gallery Berlin" loading="lazy"><figcaption>Photo: Iris Ceramica Group</figcaption></figure>
+        <p class="label">ICG Gallery</p>
+        <h2 class="reckless">Berlin, Germany</h2>
+        <address>Auguststraße 6, 10117 Berlin</address>
+        <div class="actions">
+          <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=ICG+Gallery+Auguststra%C3%9Fe+6+10117+Berlin" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </article>
+
+      <article class="showroom">
+        <figure><img src="img/london.jpg" alt="An Alchimia Element in Onice Rosa ceramic at ICG Gallery London" loading="lazy"><figcaption>Photo: Iris Ceramica Group</figcaption></figure>
+        <p class="label">ICG Gallery</p>
+        <h2 class="reckless">London, United Kingdom</h2>
+        <address>61–67 Old Street, London EC1V 9HW</address>
+        <div class="actions">
+          <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=ICG+Gallery+61-67+Old+Street+London+EC1V+9HW" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img src="img/monogram-dark-sienna.png" alt="Alchimia">
+</footer>
+
+</body>
+</html>
